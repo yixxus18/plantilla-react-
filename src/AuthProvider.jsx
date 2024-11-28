@@ -7,12 +7,21 @@ import { postData } from "./utils/fetchData";
 import authConfig from "./configs/authConfig";
 
 const defaultProvider = {
-  user: null,
-  loading: true,  
+  user: { 
+    id: 1, 
+    name: 'Usuario Demo', 
+    email: 'demo@example.com',
+    role: 'admin',
+    created_at: '2023-06-01T00:00:00.000Z',
+  },
+  //user: null,
+  loading: false,
+  //loading: true,
   setUser: () => null,
   setLoading: () => Boolean,
   login: () => Promise.resolve(),
-  logout: () => Promise.resolve(),
+  logout: () => null
+  //logout: () => Promise.resolve(),
 };
 
 const AuthContext = createContext(defaultProvider);
@@ -79,7 +88,7 @@ const AuthProvider = ({ children }) => {
           path: '/',
         });
         
-        // Si el usuario viene en la respuesta del login, úsalo
+        // Si el usuario viene en la respuesta del login, se utiliza para actualizar el estado
         if (response.user) {
           setUser(response.user);
         } else {
