@@ -26,7 +26,7 @@ const Home = () => {
       });
       console.log("Respuesta del servidor:", response);
       
-      const usersList = response['data: '] || [];
+      const usersList = response.data || [];
       setUsers(usersList);
       setLoading(false);
     } catch (error) {
@@ -40,6 +40,8 @@ const Home = () => {
     e.preventDefault();
     try {
       const dataToSend = { ...formData };
+      console.log("Datos a enviar:", dataToSend);
+      dataToSend.nombre = formData.nombre; // asegurando que se envíe el campo como 'nombre'
       if (editingUser && !dataToSend.password) {
         delete dataToSend.password;
       }
@@ -79,10 +81,10 @@ const Home = () => {
   };
 
   const handleInputChange = (e) => {
-    const { nombre, value } = e.target;
+    const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
-      [nombre]: value
+      [name]: value
     }));
   };
 
@@ -209,7 +211,7 @@ const Home = () => {
                       <div className="flex-shrink-0 h-10 w-10">
                         <div className="h-10 w-10 rounded-full bg-indigo-100 flex items-center justify-center">
                           <span className="text-indigo-700 font-medium text-lg">
-                            {user.nombre.charAt(0).toUpperCase()}
+                            {user?.nombre ? user.nombre.charAt(0).toUpperCase() : '?'}
                           </span>
                         </div>
                       </div>
