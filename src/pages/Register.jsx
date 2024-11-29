@@ -5,7 +5,7 @@ import authConfig from '../configs/authConfig';
 
 const Register = () => {
   const [formData, setFormData] = useState({
-    name: '',
+    nombre: '',
     email: '',
     password: '',
     password_confirmation: '',
@@ -39,10 +39,10 @@ const Register = () => {
   };
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
+    const { nombre, value } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      [nombre]: value
     }));
   };
 
@@ -70,17 +70,17 @@ const Register = () => {
 
           <form className="space-y-6" onSubmit={handleSubmit}>
             <div>
-              <label htmlFor="name" className="block text-sm font-medium text-gray-700">
-                Nombre completo
+              <label htmlFor="nombre" className="block text-sm font-medium text-gray-700">
+                Nombre
               </label>
               <div className="mt-1">
                 <input
-                  id="name"
-                  name="name"
+                  id="nombre"
+                  name="nombre"
                   type="text"
-                  autoComplete="name"
+                  autoComplete="nombre"
                   required
-                  value={formData.name}
+                  value={formData.nombre}
                   onChange={handleChange}
                   className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 />

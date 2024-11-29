@@ -8,7 +8,7 @@ const Home = () => {
   const [error, setError] = useState(null);
   const [editingUser, setEditingUser] = useState(null);
   const [formData, setFormData] = useState({
-    name: '',
+    nombre: '',
     email: '',
     password: '',
   });
@@ -50,7 +50,7 @@ const Home = () => {
         await postData(authConfig.usersEndpoints.create, dataToSend);
       }
       
-      setFormData({ name: '', email: '', password: '' });
+      setFormData({ nombre: '', email: '', password: '' });
       setEditingUser(null);
       await fetchUsers();
     } catch (error) {
@@ -72,17 +72,17 @@ const Home = () => {
   const handleEdit = (user) => {
     setEditingUser(user);
     setFormData({
-      name: user.name,
+      nombre: user.nombre,
       email: user.email,
       password: '' // No incluimos la contraseña en la edición
     });
   };
 
   const handleInputChange = (e) => {
-    const { name, value } = e.target;
+    const { nombre, value } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      [nombre]: value
     }));
   };
 
@@ -124,8 +124,8 @@ const Home = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <input
                 type="text"
-                name="name"
-                value={formData.name}
+                name="nombre"
+                value={formData.nombre}
                 onChange={handleInputChange}
                 placeholder="Nombre"
                 className="border p-2 rounded"
@@ -158,7 +158,7 @@ const Home = () => {
                   type="button"
                   onClick={() => {
                     setEditingUser(null);
-                    setFormData({ name: '', email: '', password: '' });
+                    setFormData({ nombre: '', email: '', password: '' });
                   }}
                   className="inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                 >
@@ -209,12 +209,12 @@ const Home = () => {
                       <div className="flex-shrink-0 h-10 w-10">
                         <div className="h-10 w-10 rounded-full bg-indigo-100 flex items-center justify-center">
                           <span className="text-indigo-700 font-medium text-lg">
-                            {user.name.charAt(0).toUpperCase()}
+                            {user.nombre.charAt(0).toUpperCase()}
                           </span>
                         </div>
                       </div>
                       <div className="ml-4">
-                        <div className="text-sm font-medium text-gray-900">{user.name}</div>
+                        <div className="text-sm font-medium text-gray-900">{user.nombre}</div>
                         
                       </div>
                     </div>

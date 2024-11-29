@@ -14,7 +14,7 @@ const Profile = () => {
         <div className="space-y-4">
           <div className="border-b pb-3">
             <p className="text-sm text-gray-600">Nombre de usuario</p>
-            <p className="text-lg font-medium text-gray-800">{user.name}</p>
+            <p className="text-lg font-medium text-gray-800">{user.nombre}</p>
           </div>
           
           <div className="border-b pb-3">

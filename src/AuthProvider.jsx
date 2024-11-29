@@ -9,7 +9,7 @@ import authConfig from "./configs/authConfig";
 const defaultProvider = {
   user: { 
     id: 1, 
-    name: 'Usuario Demo', 
+    nombre: 'Usuario Demo', 
     email: 'demo@example.com',
     role: 'admin',
     created_at: '2023-06-01T00:00:00.000Z',
