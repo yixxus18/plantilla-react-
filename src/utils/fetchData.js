@@ -58,7 +58,7 @@ export const putData = async (url, data, headers = {}) => {
     const token = cookies[authConfig.storageTokenKeyName];
 
     const response = await fetch(url, {
-      method: 'PUT',
+      method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
         ...(token && { Authorization: `Bearer ${token}` }),

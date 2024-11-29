@@ -1,4 +1,4 @@
-const baseURL = 'http://127.0.0.1:8000/api';
+const baseURL = 'http://3.142.124.132:3232/api';
 
 const authConfig = {
   baseURL,
@@ -8,10 +8,10 @@ const authConfig = {
   storageTokenKeyName: 'authToken',
   logoutEndpoint: `${baseURL}/auth/logout`,
   usersEndpoints: {
-    get: `${baseURL}/auth/get`,
-    create: `${baseURL}/auth/post`,
-    update: `${baseURL}/auth/put`,
-    delete: `${baseURL}/auth/delete`
+    get: `${baseURL}/users`,
+    create: `${baseURL}/users`,
+    update: `${baseURL}/users`,
+    delete: `${baseURL}/users`
   }
 };
 
