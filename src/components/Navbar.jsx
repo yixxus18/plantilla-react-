@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import logo from '../assets/logo-yizuz.svg';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,7 +11,7 @@ const Navbar = () => {
         <div className="flex justify-between h-16">
           <div className="flex">
             <div className="flex items-center flex-shrink-0">
-              <img src="/assets/logo-yizuz.svg" alt="" className='size-12' />
+              <img src={logo} alt="Logo Yizuz Cáfe" className='size-12' />
               <Link to="/" className="text-2xl font-bold text-[#E6B17E] hover:text-[#D4976A] transition-colors">
                 Yizuz Cáfe
               </Link>
