@@ -20,7 +20,7 @@ const Home = memo(() => {
       <div className="relative h-screen">
         <div className="absolute inset-0">
           <img 
-            src={coffe}
+            src={coffe.replace('.jpg', '.webp')}
             alt="Café de especialidad"
             className="object-cover w-full h-full"
             width="1920"
@@ -97,5 +97,4 @@ const Home = memo(() => {
 });
 
 Home.displayName = 'Home';
-
 export default Home;
