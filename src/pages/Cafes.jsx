@@ -5,8 +5,8 @@ const Cafes = () => {
     <>
       
       <SocialNavbar />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
-        <div className="text-center mb-8 sm:mb-16">
+      <div className="px-4 py-8 mx-auto max-w-7xl sm:px-6 lg:px-8 sm:py-12">
+        <div className="mb-8 text-center sm:mb-16">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#2C1810] mb-4 sm:mb-6">
             Descubre nuestra variedad de cafés
           </h1>
@@ -14,8 +14,8 @@ const Cafes = () => {
         </div>
 
         {/* Café Arábica */}
-        <div className="grid md:grid-cols-2 gap-8 sm:gap-12 items-center mb-8 sm:mb-16 bg-white/90 p-4 sm:p-8 rounded-lg shadow-xl">
-          <div className="relative h-64 sm:h-96 rounded-lg overflow-hidden shadow-xl">
+        <div className="grid items-center gap-8 p-4 mb-8 rounded-lg shadow-xl md:grid-cols-2 sm:gap-12 sm:mb-16 bg-white/90 sm:p-8">
+          <div className="relative h-64 overflow-hidden rounded-lg shadow-xl sm:h-96">
             <img 
               src="https://images.unsplash.com/photo-1587734195503-904fca47e0e9?w=800&auto=format&q=75&fit=crop&fm=jpg&cache=force"
               alt="Café Arábica" 
@@ -39,7 +39,7 @@ const Cafes = () => {
         </div>
 
         {/* Café Libérica */}
-        <div className="grid md:grid-cols-2 gap-8 sm:gap-12 items-center mb-8 sm:mb-16 bg-white/90 p-4 sm:p-8 rounded-lg shadow-xl">
+        <div className="grid items-center gap-8 p-4 mb-8 rounded-lg shadow-xl md:grid-cols-2 sm:gap-12 sm:mb-16 bg-white/90 sm:p-8">
           <div className="space-y-4 sm:space-y-6">
             <h2 className="text-3xl sm:text-4xl text-[#2C1810] font-semibold">Café Libérica</h2>
             <p className="text-base sm:text-lg text-[#4A3728] leading-relaxed">
@@ -51,7 +51,7 @@ const Cafes = () => {
               lo que la hace especialmente valiosa en ciertas regiones productoras.
             </p>
           </div>
-          <div className="relative h-64 sm:h-96 rounded-lg overflow-hidden shadow-xl">
+          <div className="relative h-64 overflow-hidden rounded-lg shadow-xl sm:h-96">
             <img 
               src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=800&auto=format&q=75&fit=crop&fm=jpg&cache=force"
               alt="Café Libérica" 
@@ -64,8 +64,8 @@ const Cafes = () => {
         </div>
 
         {/* Café Robusta */}
-        <div className="grid md:grid-cols-2 gap-8 sm:gap-12 items-center mb-8 sm:mb-16 bg-white/90 p-4 sm:p-8 rounded-lg shadow-xl">
-          <div className="relative h-64 sm:h-96 rounded-lg overflow-hidden shadow-xl">
+        <div className="grid items-center gap-8 p-4 mb-8 rounded-lg shadow-xl md:grid-cols-2 sm:gap-12 sm:mb-16 bg-white/90 sm:p-8">
+          <div className="relative h-64 overflow-hidden rounded-lg shadow-xl sm:h-96">
             <img 
               src="https://images.unsplash.com/photo-1580933073521-dc49ac0d4e6a?w=800&auto=format&q=75&fit=crop&fm=jpg&cache=force"
               alt="Café Robusta" 
@@ -90,7 +90,7 @@ const Cafes = () => {
         </div>
 
         {/* Café Excelsa */}
-        <div className="grid md:grid-cols-2 gap-8 sm:gap-12 items-center mb-8 sm:mb-16 bg-white/90 p-4 sm:p-8 rounded-lg shadow-xl">
+        <div className="grid items-center gap-8 p-4 mb-8 rounded-lg shadow-xl md:grid-cols-2 sm:gap-12 sm:mb-16 bg-white/90 sm:p-8">
           <div className="space-y-4 sm:space-y-6">
             <h2 className="text-3xl sm:text-4xl text-[#2C1810] font-semibold">Café Excelsa</h2>
             <p className="text-base sm:text-lg text-[#4A3728] leading-relaxed">
@@ -102,7 +102,7 @@ const Cafes = () => {
               es apreciado por añadir complejidad y profundidad a las mezclas de café.
             </p>
           </div>
-          <div className="relative h-64 sm:h-96 rounded-lg overflow-hidden shadow-xl">
+          <div className="relative h-64 overflow-hidden rounded-lg shadow-xl sm:h-96">
             <img 
               src="https://images.unsplash.com/photo-1511920170033-f8396924c348?w=800&auto=format&q=75&fit=crop&fm=jpg&cache=force"
               alt="Café Excelsa" 
@@ -117,5 +117,4 @@ const Cafes = () => {
     </>
   );
 };
-
 export default Cafes;
