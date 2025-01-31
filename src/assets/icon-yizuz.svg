@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <style>
+    .icon-bg { fill: #6F4E37; }
+    .icon-cup { fill: #FFFFFF; }
+    .icon-steam { fill: none; stroke: #A67B5B; stroke-width: 2; }
+  </style>
+  
+  <!-- Fondo circular -->
+  <circle class="icon-bg" cx="50" cy="50" r="48"/>
+  
+  <!-- Taza de café simplificada -->
+  <path class="icon-cup" d="M30 60L25 70H45L40 60M40 40V60"/>
+  
+  <!-- Líneas de vapor -->
+  <path class="icon-steam" d="M40 30C35 25 45 20 40 15"/>
+  <path class="icon-steam" d="M50 28C45 23 55 18 50 13"/>
+  <path class="icon-steam" d="M60 30C55 25 65 20 60 15"/>
+</svg>

@@ -1,71 +1,86 @@
-import { useContext } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { AuthContext } from '../AuthProvider';
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 const Navbar = () => {
-  const { user, logout } = useContext(AuthContext);
-  const navigate = useNavigate();
-
-  const handleLogout = () => {
-    logout();
-    navigate('/login');
-  };
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-white shadow-lg">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="bg-[#2C1810] shadow-lg">
+      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex">
-            <div className="flex-shrink-0 flex items-center">
-              <Link to="/" className="text-2xl font-bold text-indigo-600">
-                AuthApp
+            <div className="flex items-center flex-shrink-0">
+              <img src="/src/assets/logo-yizuz.svg" alt="" className='size-12' />
+              <Link to="/" className="text-2xl font-bold text-[#E6B17E] hover:text-[#D4976A] transition-colors">
+                Yizuz Cáfe
               </Link>
             </div>
-            {user && (
-              <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
-                <Link
-                  to="/"
-                  className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
-                >
-                  Dashboard
-                </Link>
-                <Link
-                  to="/profile"
-                  className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
-                >
-                  Perfil
-                </Link>
-              </div>
-            )}
           </div>
-          <div className="flex items-center">
-            {user ? (
-              <div className="flex items-center space-x-4">
-                <span className="text-gray-700">{user.nombre}</span>
-                <button
-                  onClick={handleLogout}
-                  className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                >
-                  Cerrar Sesión
-                </button>
-              </div>
-            ) : (
-              <div className="space-x-4">
-                <Link
-                  to="/login"
-                  className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                >
-                  Iniciar Sesión
-                </Link>
-                <Link
-                  to="/register"
-                  className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                >
-                  Registrarse
-                </Link>
-              </div>
-            )}
+
+          <div className="flex items-center md:hidden">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-[#E6B17E] hover:text-[#D4976A] focus:outline-none"
+            >
+              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                {isOpen ? (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                )}
+              </svg>
+            </button>
           </div>
+
+          <div className="items-center hidden md:flex">
+            <div className="flex items-center space-x-8">
+            <Link to="/" className="text-lg font-medium text-[#E6B17E] hover:text-[#D4976A] transition-colors">
+                Home
+              </Link>
+              <Link to="/nosotros" className="text-lg font-medium text-[#E6B17E] hover:text-[#D4976A] transition-colors">
+                Nosotros
+              </Link>
+              <Link to="/cafes" className="text-lg font-medium text-[#E6B17E] hover:text-[#D4976A] transition-colors">
+                Nuestros Cafés
+              </Link>
+              <Link to="/contactanos" className="text-lg font-medium text-[#E6B17E] hover:text-[#D4976A] transition-colors">
+                Contáctanos
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className={`${isOpen ? 'block' : 'hidden'} md:hidden`}>
+        <div className="px-2 pt-2 pb-3 space-y-1 bg-[#2C1810]">
+        <Link
+            to="/"
+            className="block px-3 py-2 text-base font-medium text-[#E6B17E] hover:text-[#D4976A] transition-colors"
+            onClick={() => setIsOpen(false)}
+          >
+            Home
+          </Link>
+          <Link
+            to="/nosotros"
+            className="block px-3 py-2 text-base font-medium text-[#E6B17E] hover:text-[#D4976A] transition-colors"
+            onClick={() => setIsOpen(false)}
+          >
+            Nosotros
+          </Link>
+          <Link
+            to="/cafes"
+            className="block px-3 py-2 text-base font-medium text-[#E6B17E] hover:text-[#D4976A] transition-colors"
+            onClick={() => setIsOpen(false)}
+          >
+            Nuestros Cafés
+          </Link>
+          <Link
+            to="/contactanos"
+            className="block px-3 py-2 text-base font-medium text-[#E6B17E] hover:text-[#D4976A] transition-colors"
+            onClick={() => setIsOpen(false)}
+          >
+            Contáctanos
+          </Link>
         </div>
       </div>
     </nav>
