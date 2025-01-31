@@ -25,6 +25,8 @@ const Home = memo(() => {
             className="object-cover w-full h-full"
             width="1920"
             height="1280"
+            loading="eager"
+            decoding="async"
           />
           <div className="absolute inset-0 bg-black opacity-50"></div>
         </div>
