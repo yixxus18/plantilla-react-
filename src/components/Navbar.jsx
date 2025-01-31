@@ -11,7 +11,13 @@ const Navbar = () => {
         <div className="flex justify-between h-16">
           <div className="flex">
             <div className="flex items-center flex-shrink-0">
-              <img src={logo} alt="Logo Yizuz Cáfe" className='size-12' />
+              <img 
+                src={logo} 
+                alt="Logo Yizuz Cáfe" 
+                className='size-12'
+                width="48" 
+                height="48"
+              />
               <Link to="/" className="text-2xl font-bold text-[#E6B17E] hover:text-[#D4976A] transition-colors">
                 Yizuz Cáfe
               </Link>

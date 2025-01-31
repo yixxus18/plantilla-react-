@@ -17,8 +17,8 @@ const Home = memo(() => {
       <Suspense fallback={<LoadingSpinner />}>
         <SocialNavbar />
       </Suspense>
-      <div className="relative h-screen">
-        <div className="absolute inset-0">
+      <div className="relative h-screen aspect-[1920/1280]">
+        <div className="absolute inset-0 aspect-[1920/1280]">
           <img 
             src={coffe.replace('.jpg', '.webp')}
             alt="Café de especialidad"
