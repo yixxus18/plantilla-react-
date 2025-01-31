@@ -10,6 +10,7 @@ const SocialNavbar = memo(() => {
           className="text-[#E6B17E] hover:text-[#D4976A] transition-colors"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Visita nuestro Facebook"
         >
           <FaFacebook className="text-xl sm:text-2xl" />
         </a>
@@ -18,6 +19,7 @@ const SocialNavbar = memo(() => {
           className="text-[#E6B17E] hover:text-[#D4976A] transition-colors"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Síguenos en Instagram"
         >
           <FaInstagram className="text-xl sm:text-2xl" />
         </a>
@@ -26,6 +28,7 @@ const SocialNavbar = memo(() => {
           className="text-[#E6B17E] hover:text-[#D4976A] transition-colors"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Contáctanos por WhatsApp"
         >
           <FaWhatsapp className="text-xl sm:text-2xl" />
         </a>
@@ -36,4 +39,4 @@ const SocialNavbar = memo(() => {
 
 SocialNavbar.displayName = 'SocialNavbar';
 
-export default SocialNavbar; 
+export default SocialNavbar;

@@ -1,6 +1,7 @@
 import { lazy, Suspense, memo } from 'react';
 import { Link } from 'react-router-dom';
 import { FaLeaf, FaCoffee, FaHeart } from 'react-icons/fa';
+import coffe from '../assets/coffe-bg.jpg';
 const SocialNavbar = lazy(() => import('../components/SocialNavbar'));
 const MapSection = lazy(() => import('../components/MapSection'));
 
@@ -19,7 +20,7 @@ const Home = memo(() => {
       <div className="relative h-screen">
         <div className="absolute inset-0">
           <img 
-            src="/src/assets/coffe-bg.jpg"
+            src={coffe}
             alt="Café de especialidad"
             className="object-cover w-full h-full"
             width="1920"
@@ -53,14 +54,14 @@ const Home = memo(() => {
               <div className="bg-[#2C1810] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <FaLeaf className="text-[#E6B17E] text-2xl" />
               </div>
-              <h3 className="text-xl font-bold text-[#2C1810] mb-2">Café de origen</h3>
+              <h2 className="text-xl font-bold text-[#2C1810] mb-2">Café de origen</h2>
               <p className="text-[#4A3728]">Seleccionado cuidadosamente de las mejores regiones cafeteras de Chiapas.</p>
             </div>
             <div className="text-center">
               <div className="bg-[#2C1810] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <FaCoffee className="text-[#E6B17E] text-2xl" />
               </div>
-              <h3 className="text-xl font-bold text-[#2C1810] mb-2">Tostado artesanal</h3>
+              <h2 className="text-xl font-bold text-[#2C1810] mb-2">Tostado artesanal</h2>
               <p className="text-[#4A3728]">Cada grano tostado a la perfección para resaltar sus mejores cualidades.</p>
             </div>
             <div className="text-center">
