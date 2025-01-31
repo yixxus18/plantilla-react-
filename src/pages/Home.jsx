@@ -17,14 +17,12 @@ const Home = memo(() => {
       <Suspense fallback={<LoadingSpinner />}>
         <SocialNavbar />
       </Suspense>
-      <div className="relative h-screen aspect-[1920/1280]">
-        <div className="absolute inset-0 aspect-[1920/1280]">
+      <div className="relative h-screen">
+        <div className="absolute inset-0">
           <img 
             src={coffe.replace('.jpg', '.webp')}
             alt="Café de especialidad"
             className="object-cover w-full h-full"
-            width="1920"
-            height="1280"
             loading="eager"
             decoding="async"
           />
@@ -48,7 +46,6 @@ const Home = memo(() => {
           </div>
         </div>
       </div>
-
       <div className="py-12 sm:py-20 bg-white/90">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 sm:gap-12">
@@ -76,7 +73,6 @@ const Home = memo(() => {
           </div>
         </div>
       </div>
-
       <div className="py-20 bg-[#2C1810]">
         <div className="px-4 mx-auto text-center max-w-7xl sm:px-6 lg:px-8">
           <h2 className="mb-6 text-4xl font-bold text-white">
@@ -88,7 +84,6 @@ const Home = memo(() => {
           </p>
         </div>
       </div>
-
       <Suspense fallback={<LoadingSpinner />}>
         <MapSection />
       </Suspense>
@@ -97,4 +92,5 @@ const Home = memo(() => {
 });
 
 Home.displayName = 'Home';
+
 export default Home;
