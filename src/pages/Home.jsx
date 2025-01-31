@@ -19,11 +19,11 @@ const Home = memo(() => {
       <div className="relative h-screen">
         <div className="absolute inset-0">
           <img 
-            src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=1920&auto=format&q=60&fit=crop&fm=webp&cache=force"
-            alt="Café Banner" 
+            src="/src/assets/coffe-bg.jpg"
+            alt="Café de especialidad"
             className="object-cover w-full h-full"
             width="1920"
-            height="1080"
+            height="1280"
           />
           <div className="absolute inset-0 bg-black opacity-50"></div>
         </div>
