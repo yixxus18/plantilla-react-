@@ -22,6 +22,7 @@ const Navbar = () => {
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-[#E6B17E] hover:text-[#D4976A] focus:outline-none"
+              aria-label="Abrir menú"
             >
               <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 {isOpen ? (
