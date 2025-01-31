@@ -1,7 +1,7 @@
 import { lazy, Suspense, memo } from 'react';
 import { Link } from 'react-router-dom';
 import { FaLeaf, FaCoffee, FaHeart } from 'react-icons/fa';
-import coffe from '../assets/coffe-bg-optimized.webp';
+import coffe from '../assets/coffe-bg.webp';
 const SocialNavbar = lazy(() => import('../components/SocialNavbar'));
 const MapSection = lazy(() => import('../components/MapSection'));
 
