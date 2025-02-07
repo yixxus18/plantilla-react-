@@ -23,8 +23,8 @@ const Home = memo(() => {
             src={coffe.replace('.jpg', '.webp')}
             alt="Café de especialidad"
             className="object-cover w-full h-full"
-            loading="eager"
-            decoding="async"
+            loading="lazy"
+            decoding="auto"
           />
           <div className="absolute inset-0 bg-black opacity-50"></div>
         </div>
